@@ -29,4 +29,17 @@
 
     <activity android:name="com.glossomads.sdk.GlossomAdsFullScreen" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
 
+    <activity
+        android:name="jp.maio.sdk.android.AdFullscreenActivity"
+        android:label="maiosdk" android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <intent-filter>
+            <data android:scheme="jp.maio.sdk.android"/>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+        </intent-filter>
+    </activity>
+
 </manifest>
